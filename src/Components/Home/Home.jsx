@@ -1,5 +1,5 @@
 import "./Home.css";
-import homeVideo from "../../assets/novida-hero-background-45s.mp4";
+import homeVideo from "../../assets/novida-hero-background-45s (1).mp4";
 import { IoIosArrowDown } from "react-icons/io";
 
 import Contact from "../Contact/Contact.jsx";
