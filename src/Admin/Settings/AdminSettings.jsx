@@ -30,6 +30,16 @@ const labels = {
     footer: 'نص الفوتر',
     footer_about_ar: 'نبذة الفوتر بالعربي',
     footer_about_en: 'نبذة الفوتر بالإنجليزي',
+    banner: 'بانر الصفحة الرئيسية',
+    bannerHint: 'النص اللي بيظهر في البانر تحت الفيديو. الخانة الفاضية = النص الافتراضي.',
+    banner_title_ar: 'العنوان بالعربي',
+    banner_title_en: 'العنوان بالإنجليزي',
+    banner_line1_ar: 'السطر الأول بالعربي',
+    banner_line1_en: 'السطر الأول بالإنجليزي',
+    banner_line2_ar: 'السطر الثاني بالعربي',
+    banner_line2_en: 'السطر الثاني بالإنجليزي',
+    banner_button_ar: 'كلمة الزرار بالعربي',
+    banner_button_en: 'كلمة الزرار بالإنجليزي',
     save: 'حفظ التعديلات',
     saving: 'جارٍ الحفظ…',
     saved: 'تم الحفظ',
@@ -53,6 +63,16 @@ const labels = {
     footer: 'Footer text',
     footer_about_ar: 'Footer description (Arabic)',
     footer_about_en: 'Footer description (English)',
+    banner: 'Home page banner',
+    bannerHint: 'Text shown in the banner under the video. Empty field = default text.',
+    banner_title_ar: 'Title (Arabic)',
+    banner_title_en: 'Title (English)',
+    banner_line1_ar: 'Line 1 (Arabic)',
+    banner_line1_en: 'Line 1 (English)',
+    banner_line2_ar: 'Line 2 (Arabic)',
+    banner_line2_en: 'Line 2 (English)',
+    banner_button_ar: 'Button text (Arabic)',
+    banner_button_en: 'Button text (English)',
     save: 'Save changes',
     saving: 'Saving…',
     saved: 'Saved',
@@ -64,7 +84,11 @@ const empty = {
   facebook_url: '', instagram_url: '', linkedin_url: '', x_url: '',
   phone: '', whatsapp: '', email: '', address_ar: '', address_en: '',
   footer_about_ar: '', footer_about_en: '',
+  banner_title_ar: '', banner_title_en: '', banner_line1_ar: '', banner_line1_en: '',
+  banner_line2_ar: '', banner_line2_en: '', banner_button_ar: '', banner_button_en: '',
 };
+
+const BANNER = ['title', 'line1', 'line2', 'button'];
 
 const SOCIAL = ['facebook_url', 'instagram_url', 'linkedin_url', 'x_url'];
 
@@ -169,6 +193,16 @@ export default function AdminSettings() {
         <div className="grid gap-4 md:grid-cols-2">
           <TextArea label={L.footer_about_ar} dir="rtl" rows={3} {...bind('footer_about_ar')} />
           <TextArea label={L.footer_about_en} dir="ltr" rows={3} {...bind('footer_about_en')} />
+        </div>
+
+        <Section title={L.banner} hint={L.bannerHint} />
+        <div className="grid gap-4 md:grid-cols-2">
+          {BANNER.map((f) => (
+            <div key={f} className="contents">
+              <TextArea label={L[`banner_${f}_ar`]} dir="rtl" rows={f === 'title' || f === 'button' ? 1 : 2} {...bind(`banner_${f}_ar`)} />
+              <TextArea label={L[`banner_${f}_en`]} dir="ltr" rows={f === 'title' || f === 'button' ? 1 : 2} {...bind(`banner_${f}_en`)} />
+            </div>
+          ))}
         </div>
 
         <div className="flex items-center gap-3 border-t border-gray-100 pt-5">
