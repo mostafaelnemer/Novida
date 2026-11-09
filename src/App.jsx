@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Home from "./Components/Home/Home.jsx"
 import Footer from "./Components/Footer/Footer.jsx";
@@ -82,6 +83,7 @@ function App() {
       <Route path="/Broject2" element={<Broject2 />}/>
       <Route path="/projects/:id" element={<ProjectDetails />}/>
       <Route path="/OurBrojects" element={<OurBrojects />}/>
+        <Route path="/investors" element={<InvestorsPage />}/>
                   <Route path="/sectors/:slug" element={<SectorPage />}/>
                               <Route path="*" element={<Navigate to="/" replace />} />
       <Route path="/investors/:slug" element={<InvestorsPage />}/>
