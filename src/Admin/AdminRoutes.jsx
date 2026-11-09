@@ -7,6 +7,7 @@ import AdminSectors from './Sectors/AdminSectors';
 import AdminProjects from './Projects/AdminProjects';
 import AdminNews from './News/AdminNews';
 import AdminLeadership from './Leadership/AdminLeadership';
+import AdminBanner from './Banner/AdminBanner';
 import AdminReports from './Reports/AdminReports';
 import AdminSectorShowcase from './SectorShowcase/AdminSectorShowcase';
 import AdminAbout from './About/AdminAbout';
