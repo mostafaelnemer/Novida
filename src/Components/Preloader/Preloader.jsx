@@ -6,7 +6,7 @@ import logo from "../../assets/logo.png";
   وبتختفي لما الصور والفيديو يخلصوا تحميل (أو بعد 5 ثواني بالكتير)
 */
 
-const MAX_WAIT = 5000; // أقصى وقت للانتظار بالمللي ثانية
+const MAX_WAIT = 4000; // أقصى وقت للانتظار بالمللي ثانية
 
 export default function Preloader() {
   const [hiding, setHiding] = useState(false);
