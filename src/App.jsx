@@ -7,7 +7,7 @@ import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Home from "./Components/Home/Home.jsx"
 import Footer from "./Components/Footer/Footer.jsx";
-import { Routes, Route ,Link, useLocation } from "react-router-dom";
+import { Routes, Route ,Link, useLocation, Navigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { SlNote } from "react-icons/sl";
 import NewsPage from "./Components/NewsPage/NewsPage.jsx";
@@ -83,7 +83,7 @@ function App() {
       <Route path="/projects/:id" element={<ProjectDetails />}/>
       <Route path="/OurBrojects" element={<OurBrojects />}/>
                   <Route path="/sectors/:slug" element={<SectorPage />}/>
-                        <Route path="/investors" element={<InvestorsPage />}/>
+                              <Route path="*" element={<Navigate to="/" replace />} />
       <Route path="/investors/:slug" element={<InvestorsPage />}/>
     </Routes>
     </main>
