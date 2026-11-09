@@ -5,6 +5,7 @@ import Icon from '../components/Icon';
 
 const links = [
   { to: '/admin', key: 'dashboard', icon: 'dashboard', end: true },
+    { to: '/admin/banner', label: { ar: 'البانر الرئيسي', en: 'Home banner' }, icon: 'showcase' },
   { to: '/admin/sectors', key: 'sectors', icon: 'sectors' },
   { to: '/admin/projects', key: 'projects', icon: 'projects' },
   { to: '/admin/news', key: 'news', icon: 'news' },
