@@ -22,7 +22,7 @@ function Home() {
     <section className="Home" id="Home">
       {/* Background Video */}
       <div className="home-video-wrapper">
-        <video className="home-video" autoPlay loop muted playsInline>
+      <video className="home-video" autoPlay loop muted playsInline preload="auto" poster="/novida-hero-poster%20(1).jpg">
           <source src={homeVideo} type="video/mp4" />
         </video>
       </div>
