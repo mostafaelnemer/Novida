@@ -68,7 +68,7 @@ function LeaderModal({ lead, lang, onClose }) {
   );
 }
 
-// الكارت: صورة + اسم + منصب فقط — كل الكروت بنفس الطول
+// الكارت: صورة + اسم + منصب فقط (التصميم الأصلي)، والتفاصيل في النافذة الزرقا
 const OurLeadership = () => {
   const { i18n } = useTranslation();
   const { data: leads } = useLeaders();
@@ -89,25 +89,19 @@ const OurLeadership = () => {
           <p>مجلس الاداره </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 items-start">
           {leads.map((lead) => {
             const name = localized(lead, "name", i18n.language);
             return (
-              <button
-                type="button"
+              <div
                 key={lead.id}
-                className="board-card group text-start w-full h-full flex flex-col rounded-xl overflow-hidden bg-white border border-gray-200 hover:border-primary hover:-translate-y-1 hover:shadow-xl transition duration-300 cursor-pointer"
+                className="board-card hover:text-primary hover:border-primary cursor-pointer w-full flex flex-col"
                 onClick={() => setSelected(lead)}
               >
-                <LeaderPhoto src={lead.image_url} alt={name} className="transition duration-500 group-hover:brightness-105" />
-                <div className="p-4 flex flex-col flex-1">
-                  <h2 className="pb-2 text-black font-extrabold group-hover:text-primary transition">{name}</h2>
-                  <h3 className="text-textPara text-sm leading-6 flex-1">{localized(lead, "position", i18n.language)}</h3>
-                  <span className="mt-3 text-primary text-sm font-bold opacity-70 group-hover:opacity-100 transition">
-                    {i18n.language === "ar" ? "اقرأ النبذة ←" : "Read profile →"}
-                  </span>
-                </div>
-              </button>
+                <LeaderPhoto src={lead.image_url} alt={name} className="rounded-lg" />
+                <h2 className="pt-4 pb-2 text-black font-extrabold">{name}</h2>
+                <h3 className="text-textPara mb-4">{localized(lead, "position", i18n.language)}</h3>
+              </div>
             );
           })}
         </div>
