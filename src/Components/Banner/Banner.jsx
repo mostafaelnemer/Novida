@@ -17,7 +17,7 @@ function Banner() {
   };
 
   return (
-    <div className="Banner ">
+        <div className="Banner " style={s?.banner_image_url ? { backgroundImage: `url("${s.banner_image_url}")` } : undefined}>
        <div className="container  mx-auto h-full">
         <div className="Banner-content  ">
            <div className="">
