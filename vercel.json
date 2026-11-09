@@ -1,1 +1,9 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
+{
+  "redirects": [
+    { "source": "/Default.aspx", "destination": "/", "permanent": true },
+    { "source": "/default.aspx", "destination": "/", "permanent": true },
+    { "source": "/:page(.*\\.aspx)", "destination": "/", "permanent": true },
+    { "source": "/:page(.*\\.php)", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
