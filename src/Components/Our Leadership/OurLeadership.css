@@ -1,5 +1,7 @@
 .board-card:hover {
-  border-color: var(--primary, #162D77);
+  border-top: 2px solid var(--primary);
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 /* ───────── نافذة التفاصيل: تتفتح زي صفحة كتاب ───────── */
