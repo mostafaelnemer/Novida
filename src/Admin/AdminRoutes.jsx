@@ -13,6 +13,7 @@ import AdminSectorShowcase from './SectorShowcase/AdminSectorShowcase';
 import AdminAbout from './About/AdminAbout';
 import AdminChairman from './Chairman/AdminChairman';
 import AdminSettings from './Settings/AdminSettings';
+
 import AdminIRPages from './IR/AdminIRPages';
 import AdminIRContent from './IR/AdminIRContent';
 import AdminIRStock from './IR/AdminIRStock';
@@ -40,6 +41,7 @@ export const adminRoutes = (
       <Route path="chairman" element={<AdminChairman />} />
       <Route path="settings" element={<AdminSettings />} />
       <Route path="ir-pages" element={<AdminIRPages />} />
+            <Route path="banner" element={<AdminBanner />} />
       <Route path="ir-content" element={<AdminIRContent />} />
       <Route path="ir-stock" element={<AdminIRStock />} />
     </Route>
